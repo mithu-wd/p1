@@ -1,42 +1,38 @@
 function Ball(){
-  this.x=random(width);
-  this.y=random(height);
-  this.xspeed=10;
-  this.yspeed=10;
+  this.y=random(50);
+  this.gravity=0.5;
+  this.yspeed=0;
+  this.force=-10
+  this.w=100;
   this.show =function(){
     stroke(0);
-    ellipse(this.x,this.y,50*2,50*2);
+    ellipse(height/2/3,this.y,100,this.w);
     fill(255,0,0);
-      }
+  }
+  
+  this.up=function(){
+    this.yspeed=this.force;
+  console.log("working");
+     
+   }
   this.update = function(){
+///      ()
+  this.yspeed+=this.gravity;
+  this.y+=this.yspeed;
+  if(this.y>height-50){
+  this.y=height-50; 
+  this.yspeed=0;
+  this.w=5 ;
+  }
+  else
+  this.w=100;
+  if(this.y<50){
+      
+this.y=height;  }
 
-    this.x+=this.xspeed;
-    this.y+=this.yspeed;
 
-
-    if (this.y>=height){
-
-      this.yspeed-=10;
-
-    }
-    if (this.y<=0){
-
-      this.yspeed+=10;
-
-    }
-    if (this.x>=width){
-
-      this.xspeed-=10;
-
-    }
-    if (this.x<=0){
-
-      this.xspeed+=10;
-
-    }
 
   }
-      
-    }
 
 
+  }
