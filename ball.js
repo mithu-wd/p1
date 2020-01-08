@@ -1,4 +1,5 @@
 function Ball(){
+  this.h=70;
   this.y=random(50);
   this.gravity=0.5;
   this.yspeed=0;
@@ -6,7 +7,7 @@ function Ball(){
   this.w=100;
   this.show =function(){
     stroke(0);
-    ellipse(height/2/3,this.y,100,this.w);
+    ellipse(height/2/3,this.y,h,this.w);
     fill(255,0,0);
   }
   
@@ -19,14 +20,14 @@ function Ball(){
 ///      ()
   this.yspeed+=this.gravity;
   this.y+=this.yspeed;
-  if(this.y>height-50){
-  this.y=height-50; 
+  if(this.y>height-h/2){
+  this.y=height-h/2; 
   this.yspeed=0;
   this.w=5 ;
   }
   else
-  this.w=100;
-  if(this.y<50){
+  this.w=h;
+  if(this.y<h/2){
       
 this.y=height;  }
 
