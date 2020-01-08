@@ -1,14 +1,23 @@
 var ball;
-var checker;
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
   ball = new Ball();
 }
 function draw() {
-  background(0);
+  background(200);
   ball.update();
   ball.show();
 
 
 }
+function keyPressed(){
+  if (key == " "){
+    ball.up();
+  }
+}
+
+function mouseClicked(){
+    ball.up();
+}
+
