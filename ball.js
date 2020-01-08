@@ -4,7 +4,7 @@ function Ball(){
   this.gravity=0.5;
   this.yspeed=0;
   this.force=-10
-  this.w=100;
+  this.w=h;
   this.show =function(){
     stroke(0);
     ellipse(height/2/3,this.y,h,this.w);
