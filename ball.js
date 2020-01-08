@@ -27,7 +27,7 @@ function Ball(){
   }
   else
   this.w=this.h;
-  if(this.y>0+this.h/2){
+  if(this.y<0+this.h/2){
       
 this.y=height;  }
 
