@@ -12,7 +12,7 @@ function Needles(){
     }
     
     this.update=function(){
-        this.x-=5;
+        this.x-=12;
     }
     this.end= function(){
         if (this.x <-this.w){
