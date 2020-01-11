@@ -3,7 +3,7 @@ function Ball(){
     this.width=window.innerWidth;
     this.height=window.innerHeight;
     this.y=100;
-    this.force=-15;
+    this.force=-10;
     this.x=this.width/8;
     this.speed=0;
     this.gravity=1;
